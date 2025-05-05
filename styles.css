@@ -1,60 +1,123 @@
-body{
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: hsl(0, 0%, 95%);
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: #fcfcfc;
+}
+
+.calculator {
+  border: 2px solid #aaa;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgb(80, 79, 79);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#display {
+  height: 40px;
+  background: #222;
+  color: white;
+  font-size: 1.5rem;
+  text-align: right;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(5, 60px);
+  grid-gap: 10px;
+}
+
+button {
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: #eee;
+  transition: background 0.2s;
+}
+
+#percent {
+  background: #ffb74d;
+}
+
+#percent:hover {
+  background: hsl(36, 97%, 55%);
+}
+
+#percent:active {
+  background: hsl(36, 97%, 45%);
+}
+
+button:hover {
+  background: #ccc;
+}
+
+button:active {
+  background: #a4a4a4;
+}
+
+.operator {
+  background: #ffb74d;
+}
+.operator:hover{
+  background: hsl(36, 97%, 55%);
+}
+.operator:active {
+  background: hsl(36, 97%, 45%);
+}
+.equals {
+  grid-column: span 2;
+
+  background: hsl(122, 39%, 50%);
+  color: white;
+  
+}
+.equals:hover{
+  background: hsl(122, 39%, 60%);
+}
+.equals:active{
+  background: hsl(122, 39%, 40%);
+}
+.clear {
+  background: hsl(4, 71%, 61%);
+  color: white;
+}
+
+.clear:hover {
+  background: hsl(4, 92%, 65%);
 
 }
-button{
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    border: none;
-    background-color: hsl(0, 0%, 30%);
-    color: white;
-    cursor: pointer;
-    font-size: 3rem;
-    font-weight: bold;
+
+.clear:active {
+  background: hsl(4, 93%, 51%);
 
 }
-#keys{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding: 25px;
+
+.decimal,
+.backspace {
+  grid-column: span 1;
 }
-#calculator{
-    font-family: Arial, sans-serif;
-    background-color: hsl(0, 0%, 10%);
-    max-width: 500px;
-    overflow:hidden;
-    border-radius: 15px;
+
+.backspace {
+  background: hsl(4, 78%, 61%);
+  color: white;
+  font-size: 1.9rem;
+}
+
+.backspace:hover {
+  background: hsl(4, 92%, 65%);
 
 }
-#display{
-    width: 100%;
-    padding: 20px;
-    font-size: 5rem;
-    text-align: left;
-    border: none;
-    background-color: hsl(0, 0%, 20%);
-    color: white;
-}
-button:hover{
-    background-color:  hsl(0, 0%, 40%);
-    
-}
-button:active{
-    background-color:  hsl(0, 0%, 50%);
-}
-.operator-btn{
-    background-color: hsl(35, 100%, 45%);
-}
-.operator-btn:hover{
-    background-color: hsl(35, 100%, 65%);
-}
-.operator-btn:active{
-    background-color: hsl(35, 100%, 75%);
+
+.backspace:active {
+  background: hsl(4, 93%, 51%);
+
 }
